@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class CandleRefill : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private void OnTriggerEnter(Collider collider)
     {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        Debug.Log("Collision");
+        if(collider.CompareTag("Player"))
+        {
+            Debug.Log("Player Collision");
+
+
+            LightManager.instance.RestoreCandle();
+            GetComponent<AudioSource>().Play();
+
+        }
     }
 }
