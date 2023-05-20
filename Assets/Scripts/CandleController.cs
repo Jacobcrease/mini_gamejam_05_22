@@ -7,40 +7,36 @@ public class CandleController : MonoBehaviour
     [SerializeField] private Light light;
     [SerializeField] private float maxIntensity = 3.0f;
     [SerializeField] private float minIntensity = 0.0f;
-    [SerializeField] private float stepSize = 0.2f;
+
+    private float intensityDistance;
+
+    private void Start()
+    {
+        intensityDistance = maxIntensity - minIntensity;
+    }
 
     public float LightIntensity
     {
-        get => light.intensity;
+        get => light.intensity/intensityDistance;
         private set
         {
-            if (value < minIntensity)
-            {
-                light.intensity = minIntensity;
-            }
-            if(value > maxIntensity)
-            {
-                light.intensity = maxIntensity;
-            }
-            if (value >= minIntensity && value <= maxIntensity)
-            {
-                light.intensity = value;
-            }
+            float newVal = Math.Clamp(value, 0f, 1f);
+            light.intensity = minIntensity + newVal*intensityDistance;
         }
     }
     
-    public void SmallIncrease()
+    public void SmallIncrease(float value)
     {
-        LightIntensity += stepSize;
+        LightIntensity += value;
     }
     
-    public void SmallDecrease()
+    public void SmallDecrease(float value)
     {
-        LightIntensity -= stepSize;
+        LightIntensity -= value;
     }
 
     public void FillUp()
     {
-        LightIntensity = maxIntensity;
+        LightIntensity = 1;
     }
 }
