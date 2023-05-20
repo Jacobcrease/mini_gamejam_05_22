@@ -4867,8 +4867,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.635669, y: 1.580373, z: 1.8254019}
-  m_Center: {x: -1.2950412, y: 0.7901865, z: 1.3207604}
+  m_Size: {x: 1.635669, y: 9.747269, z: 1.8254021}
+  m_Center: {x: -1.2950411, y: 4.8736324, z: 1.3207605}
 --- !u!82 &579345984414062497
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4879,7 +4879,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: af12971575c60a94aa46ea8f02d730fb, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
