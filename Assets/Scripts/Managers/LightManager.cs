@@ -26,4 +26,9 @@ public class LightManager : MonoBehaviour
     {
         _candleController.SmallDecrease(Time.deltaTime * decreaseScaler);
     }
+
+    public void RestoreCandle()
+    {
+        _candleController.FillUp();
+    }
 }
