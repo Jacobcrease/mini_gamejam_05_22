@@ -13,10 +13,10 @@ public class SpikeKillScript : MonoBehaviour
         {
             Debug.Log("Player Collision");
 
-
+            //StartCoroutine(KillPlayer());  // Let sound play then load scene
             GetComponent<AudioSource>().Play();
 
-            StartCoroutine(KillPlayer());  // Let sound play then load scene
+            
         }
     }
     IEnumerator KillPlayer ()

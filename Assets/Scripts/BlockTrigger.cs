@@ -22,6 +22,7 @@ public class BlockTrigger : MonoBehaviour
         //_badBlock.transform.position = Vector3.Lerp(_badBlock.transform.position, new Vector3(10.6f, 0.3f, -34.0f), 0.2f);
         _badBlock.GetComponent<Rigidbody>().useGravity = true;
         _badBlock.GetComponent<BoxCollider>().enabled = true;
+        //_badBlock.GetComponent<BoxCollider>().isTrigger = true;
     }
     
     void Start()
