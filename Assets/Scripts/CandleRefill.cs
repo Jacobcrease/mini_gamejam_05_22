@@ -4,18 +4,29 @@ using UnityEngine;
 
 public class CandleRefill : MonoBehaviour
 {
+    bool used = false;
     private void OnTriggerEnter(Collider collider)
     {
-
-        Debug.Log("Collision");
-        if(collider.CompareTag("Player"))
+        if(!used)
         {
-            Debug.Log("Player Collision");
+            used = true;
+            Debug.Log("Collision");
+            if(collider.CompareTag("Player"))
+            {
+                Debug.Log("Player Collision");
 
 
-            LightManager.instance.RestoreCandle();
-            GetComponent<AudioSource>().Play();
-
+                LightManager.instance.RestoreCandle();
+                GetComponent<AudioSource>().Play();
+                StartCoroutine(DestroySelf());
+            }
         }
+    }
+    IEnumerator DestroySelf ()
+    {
+        yield return new WaitForSeconds(1f);
+        Destroy(gameObject);
+        
+
     }
 }
