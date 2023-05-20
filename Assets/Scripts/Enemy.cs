@@ -1,19 +1,33 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    [SerializeField] private Collider senses;
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private EnemySenses senses;
+    private bool currentlyChasing = false;
+
+    private void FixedUpdate()
     {
-        
+        if (senses.isSeeing && !currentlyChasing)
+        {
+            startChasing();
+        }
+
+        if (!senses.isSeeing && currentlyChasing)
+        {
+            stopChasing();
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    private void stopChasing()
     {
-        
+        throw new NotImplementedException();
+    }
+
+    private void startChasing()
+    {
+        throw new NotImplementedException();
     }
 }
