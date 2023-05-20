@@ -214,7 +214,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1669020879928568241}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+  m_LocalRotation: {x: -0.7069834, y: 0, z: 0, w: 0.7072302}
   m_LocalPosition: {x: -0, y: -3.1072385, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -224,7 +224,7 @@ Transform:
   - {fileID: 1058818729695354800}
   m_Father: {fileID: 8144358217557128037}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -89.98, y: 0, z: 0}
 --- !u!1 &1720525898892498656
 GameObject:
   m_ObjectHideFlags: 0
@@ -968,6 +968,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8144358217557128037}
+  - component: {fileID: 5777912198475872223}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -993,6 +994,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5777912198475872223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8812772654063217119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df33f54c232e7528b8aac0c00e5ae484, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  senses: {fileID: 2050554743054466715}
+  enemySpeed: 5
 --- !u!1 &9007278782674495210
 GameObject:
   m_ObjectHideFlags: 0
@@ -1018,14 +1033,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9007278782674495210}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+  m_LocalRotation: {x: 0, y: 0.7069834, z: 0.7072302, w: 0}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8144358217557128037}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -89.98, y: 0, z: 180}
 --- !u!33 &4362410958264917662
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1150,6 +1165,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94b41d6f7ced295e196aabc86f6da99b, type: 3}
+--- !u!114 &2050554743054466715 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1160175820921466648, guid: 94b41d6f7ced295e196aabc86f6da99b,
+    type: 3}
+  m_PrefabInstance: {fileID: 895316304968651139}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b303e90c5d3795c0aeafb4fe790a15a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &2050554743054466725 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1160175820921466662, guid: 94b41d6f7ced295e196aabc86f6da99b,

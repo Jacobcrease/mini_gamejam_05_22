@@ -6,13 +6,14 @@ using UnityEngine;
 public class EnemySenses : MonoBehaviour
 {
     public bool isSeeing = false;
+    public Transform target;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            Debug.Log("I SEE YOU");
             isSeeing = true;
+            target = other.transform;
         }
     }
 
@@ -20,7 +21,6 @@ public class EnemySenses : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            Debug.Log("I SEE YOU NOT");
             isSeeing = false;
         }
     }
