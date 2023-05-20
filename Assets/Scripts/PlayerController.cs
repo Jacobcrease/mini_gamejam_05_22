@@ -20,7 +20,6 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector2 _actualSpeed;
         float _input_X = 0f;
         float _input_Y = 0f;
 
@@ -34,15 +33,15 @@ public class PlayerController : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.UpArrow))
         {
-            _input_Y += 1;
+            _input_Y -= 1;
         }
         if (Input.GetKey(KeyCode.DownArrow))
         {
-            _input_Y -= 1;
+            _input_Y += 1;
         }
-        _actualSpeed = new Vector2 (_input_X * Time.deltaTime * playerSpeed, _input_Y * Time.deltaTime * playerSpeed);
-        Vector3 movement = new Vector3(_input_X * playerSpeed * Time.deltaTime, 0, _input_Y * playerSpeed * Time.deltaTime);
-        movement = transform.TransformDirection(movement);
+       // _actualSpeed = new Vector2 (_input_X * Time.deltaTime * playerSpeed, _input_Y * Time.deltaTime * playerSpeed);
+        Vector3 movement = new Vector3(_input_Y * playerSpeed * Time.deltaTime, 0, _input_X * playerSpeed * Time.deltaTime);
+      //  movement = transform.TransformDirection(movement);
 
         Debug.Log(movement);
         characterController.Move(movement);
